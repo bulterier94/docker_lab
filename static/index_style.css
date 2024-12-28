@@ -1,0 +1,169 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+/* Стиль для основного заголовка (Добро пожаловать) */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700; /* Увеличим жирность шрифта */
+    text-transform: uppercase; /* Заголовок в верхнем регистре */
+    letter-spacing: 1px; /* Расстояние между буквами */
+}
+
+/* Стиль для ссылок (Выход) */
+a {
+    text-align: center;
+    color: #4CAF50;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500; /* Немного утончим стиль ссылки */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Контейнер для формы добавления заметки */
+.form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 500px; /* Ограничение ширины */
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+/* Заголовок формы (Добавить заметку) */
+.form-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Текстовое поле для ввода заметки */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: none;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Кнопка добавления заметки (зелёная) */
+button.add_note {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button.add_note:hover {
+    background-color: #45a049;
+}
+
+/* Контейнер для списка заметок */
+.notes-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+/* Заголовок списка заметок */
+.notes-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Список заметок */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* Элемент списка заметки */
+li {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5; /* Интерлиньяж для улучшения читаемости */
+}
+
+/* Стили для даты */
+small {
+    color: #777;
+    font-size: 12px;
+}
+
+/* Кнопка удаления заметки (красная) */
+form button.delete_note{
+    width: 100%;
+    padding: 12px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button.delete_note:hover {
+    background-color: #e53935;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заметки</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+</head>
+<body>
+    <h1>Добро пожаловать, {{ session['username'] }}</h1>
+    <a href="{{ url_for('logout') }}">Выход</a>
+    
+    <!-- Контейнер для формы добавления заметки -->
+    <div class="form-container">
+        <h2>Добавить заметку</h2>
+        <form action="{{ url_for('add_note') }}" method="POST">
+            <textarea name="content" required></textarea><br>
+            <button type="submit" class="add_note">Добавить заметку</button>
+        </form>
+    </div>
+
+    <!-- Контейнер для списка заметок -->
+    <div class="notes-container">
+        <h2>Ваши заметки</h2>
+        <ul>
+            {% for note in notes %}
+            <li>
+                <p>{{ note.content }}</p>
+                <p><small>Создано: {{ note.created_at.strftime('%Y-%m-%d %H:%M:%S') }}</small></p>
+                <form action="{{ url_for('delete_note', note_id=note.id) }}" method="POST">
+                    <button type="submit" class="delete_note">Удалить</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

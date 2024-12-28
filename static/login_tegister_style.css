@@ -1,0 +1,70 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Заполняет всю высоту экрана */
+}
+
+/* Контейнер для формы */
+.form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Ограничение ширины */
+    box-sizing: border-box;
+}
+
+/* Заголовок формы */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Поля ввода */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Кнопка отправки */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Сообщение о регистрации/входе */
+p {
+    text-align: center;
+    color: #555;
+}
+
+p a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
